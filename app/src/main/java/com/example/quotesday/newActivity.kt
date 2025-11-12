@@ -16,7 +16,7 @@ class NewActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        val fragment = mainfragment()
+        val fragment = MainFragment()
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.mainFrame, fragment)

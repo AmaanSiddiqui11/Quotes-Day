@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quotesday.databinding.FragmentMainfragmentBinding
 
-class mainfragment : Fragment() {
+class MainFragment : Fragment() {
 
     private var _binding: FragmentMainfragmentBinding? = null
     private val binding get() = _binding!!
@@ -24,6 +24,12 @@ class mainfragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainfragmentBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
 
         val toolbar = binding.toolbar
         (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
@@ -109,14 +115,22 @@ class mainfragment : Fragment() {
         val defaultText = ContextCompat.getColor(requireContext(), android.R.color.black)
         val selectedText = ContextCompat.getColor(requireContext(), android.R.color.white)
 
+
+
+        buttons.forEach {
+            it.backgroundTintList = ColorStateList.valueOf(defaultBg)
+            it.setTextColor(defaultText)
+        }
+        binding.btnAll.backgroundTintList = ColorStateList.valueOf(selectedBg)
+        binding.btnAll.setTextColor(selectedText)
+        showFilteredQuotes("All")
+
         buttons.forEach { button ->
             button.setOnClickListener {
-
                 buttons.forEach {
                     it.backgroundTintList = ColorStateList.valueOf(defaultBg)
                     it.setTextColor(defaultText)
                 }
-
 
                 button.backgroundTintList = ColorStateList.valueOf(selectedBg)
                 button.setTextColor(selectedText)
@@ -133,8 +147,6 @@ class mainfragment : Fragment() {
                 }
             }
         }
-
-        return binding.root
     }
 
     override fun onDestroyView() {
