@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:icon="@drawable/outline_notes_24" android:title="notes" app:showAsAction="always" android:id="@+id/notesmenu"/>
+    <item android:icon="@drawable/baseline_filter_alt_24" android:title="filter" android:id="@+id/filtermenu"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainfragmentt"
+android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainfragment">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leftIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/outline_notes_24"
+            android:layout_gravity="start|center_vertical" />
+
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quotes Day"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center" />
+
+        <!-- 🔹 Right Icon -->
+        <ImageView
+            android:id="@+id/rightIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+     android:layout_marginEnd="15dp"
+            android:src="@drawable/baseline_filter_alt_24"
+            android:layout_gravity="end|center_vertical" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+       android:background="@drawable/shadowline"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+
+
+    <TextView
+        android:id="@+id/exploretext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Explore"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/text_Comm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="sans-serif"
+        android:text="Awesome Quotes from our Community"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exploretext" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_Comm">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="15dp"
+                app:backgroundTint="@color/black"
+                android:text="All"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnProverbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/black"
+                android:text="Proverbs"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp" />
+
+            <Button
+                android:id="@+id/btnBooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="15dp"
+                android:backgroundTint="@color/black"
+                android:text="Books" />
+
+            <Button
+                android:id="@+id/btnLife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="15dp"
+                android:text="Life" />
+
+            <Button
+                android:id="@+id/btnMaintaility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_marginStart="8dp"
+
+                android:text="Maintilty" />
+
+            <Button
+                android:id="@+id/btnEmotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="15dp"
+                android:text="Emotions" />
+
+            <Button
+                android:id="@+id/btnFamous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="15dp"
+                android:layout_marginStart="8dp"
+
+                android:backgroundTint="@color/black"
+                android:text="Famous" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/strecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/qoutestemplate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

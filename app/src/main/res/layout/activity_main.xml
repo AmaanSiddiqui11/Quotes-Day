@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image1st"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/womeeen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Quotez"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image1st" />
+
+    <TextView
+        android:id="@+id/text2nd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="simply dummy text of the printing and hatkela the of the of type and scrambled it to"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inspireBtn"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+       app:icon="@drawable/outline_arrow_forward_ios_24"
+        android:text="Inspire me"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:fontFamily="monospace"
+        app:cornerRadius="15dp"
+        app:iconGravity="textEnd"
+        app:iconPadding="20dp"
+        app:iconSize="32dp"
+        app:layout_constraintEnd_toEndOf="@id/text2nd"
+        app:layout_constraintStart_toStartOf="@id/text2nd"
+        app:layout_constraintTop_toBottomOf="@id/text2nd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
