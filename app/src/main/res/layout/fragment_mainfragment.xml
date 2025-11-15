@@ -6,7 +6,7 @@
     android:id="@+id/mainfragmentt"
 android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".mainfragment">
+    tools:context=".MainFragment">
 
     <androidx.appcompat.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -25,7 +25,7 @@ android:background="@color/white"
             android:id="@+id/leftIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="15dp"
             android:src="@drawable/outline_notes_24"
             android:layout_gravity="start|center_vertical" />
@@ -40,12 +40,11 @@ android:background="@color/white"
             android:textSize="18sp"
             android:layout_gravity="center" />
 
-        <!-- 🔹 Right Icon -->
         <ImageView
             android:id="@+id/rightIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
      android:layout_marginEnd="15dp"
             android:src="@drawable/baseline_filter_alt_24"
             android:layout_gravity="end|center_vertical" />
@@ -153,8 +152,7 @@ android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:layout_marginStart="8dp"
-
-                android:text="Maintilty" />
+                android:text="Maintaility" />
 
             <Button
                 android:id="@+id/btnEmotions"
@@ -170,8 +168,7 @@ android:background="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="15dp"
-                android:layout_marginStart="8dp"
-
+               android:layout_marginHorizontal="20dp"
                 android:backgroundTint="@color/black"
                 android:text="Famous" />
         </LinearLayout>

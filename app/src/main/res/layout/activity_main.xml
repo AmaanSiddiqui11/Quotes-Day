@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/image1st"
+        android:id="@+id/iv_splash"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:layout_marginTop="200dp"
@@ -27,7 +27,7 @@
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image1st" />
+        app:layout_constraintTop_toBottomOf="@id/iv_splash" />
 
     <TextView
         android:id="@+id/text2nd"
@@ -45,8 +45,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/inspireBtn"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+       android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/black"
        app:icon="@drawable/outline_arrow_forward_ios_24"

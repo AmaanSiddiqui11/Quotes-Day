@@ -5,10 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quotesday.databinding.QoutestemplateBinding
 
-
 class QoutesAdapter(
-    private var textqoutes: List<String>,
-    private var textquoteswriter: List<String>
+    private var quotes: MutableList<QuotesData>   // <-- IMPORTANT
 ) : RecyclerView.Adapter<QoutesAdapter.QoutesViewHolder>() {
 
     private var onItemClick: ((String, String) -> Unit)? = null
@@ -26,30 +24,32 @@ class QoutesAdapter(
         return QoutesViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: QoutesViewHolder, position: Int) {
-        val quote = textqoutes[position]
-        val writer = textquoteswriter[position]
-        holder.bind(quote, writer)
-
-        holder.binding.cardqoutes.setOnClickListener {
-            onItemClick?.invoke(quote, writer)
-        }
-    }
-
-    override fun getItemCount(): Int = textqoutes.size
-
-    fun updateData(newQuotes: List<String>, newWriters: List<String>) {
-        textqoutes = newQuotes
-        textquoteswriter = newWriters
+    // ============================
+    //      FILTER UPDATE CODE
+    // ============================
+    fun updateData(newList: List<QuotesData>) {
+        quotes.clear()
+        quotes.addAll(newList)
         notifyDataSetChanged()
     }
 
-    class QoutesViewHolder(val binding: QoutestemplateBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    override fun onBindViewHolder(holder: QoutesViewHolder, position: Int) {
+        val item = quotes[position]
+        holder.bind(item)
 
-        fun bind(quote: String, writer: String) {
-            binding.textqoutes.text = quote
-            binding.textwriter.text = writer
+        holder.binding.cardqoutes.setOnClickListener {
+            onItemClick?.invoke(item.quotes, item.writer)
+        }
+    }
+
+    override fun getItemCount(): Int = quotes.size
+
+    class QoutesViewHolder(val binding: QoutestemplateBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(quotesData: QuotesData) {
+            binding.textqoutes.text = quotesData.quotes
+            binding.textwriter.text = quotesData.writer
         }
     }
 }

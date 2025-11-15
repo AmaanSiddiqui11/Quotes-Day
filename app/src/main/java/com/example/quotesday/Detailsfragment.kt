@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import com.example.quotesday.databinding.FragmentDetailsfragmentBinding
 
-class detailsfragment : Fragment() {
+class Detailsfragment : Fragment() {
 
 
     private var _binding: FragmentDetailsfragmentBinding? = null
